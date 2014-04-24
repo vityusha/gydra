@@ -47,7 +47,7 @@ static void print_usage()
 "-s, --stop\t\t- stop audio stream from remote engine\n"
 "--out-file [filename]\t- write received data to local file\n"
 "\t\t\t  allowed only when --num--packets or --time is defined\n"
-"\t\t\t  if no filename specified then default \"gydra.raw\""
+"\t\t\t  if no filename specified then default \"gydra.raw\"\n"
 "\t\t\t  will be used\n"
 "\n"
 "-h, --help\t\t- print this help message\n"
