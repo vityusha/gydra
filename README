@@ -44,8 +44,12 @@ Usage: gydra [options]
                           will be used
 -t, --time <n>          - time in seconds for audio output before program exit
 -n, --num-packets <n>   - number of packets to be output before program exit
--m, --mode [test|real]  - operation mode, real mode is default
+-m, --mode <test|real>  - operation mode, real mode is default
 -s, --stop              - stop audio stream from remote engine
+--out-file [filename]   - write received data to local file
+                          allowed only when --num--packets or --time is defined
+                          if no filename specified then default "gydra.raw"
+                          will be used
 
 -h, --help              - print this help message
 -v, --version           - print program version and copyright and exit
