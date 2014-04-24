@@ -1,0 +1,56 @@
+-------------------------------------------------------
+What is Gydra?
+-------------------------------------------------------
+'gydra' is a utility that can play audio stream from
+special audio net server.
+
+-------------------------------------------------------
+How to compile?
+-------------------------------------------------------
+Requirements:
+-------------
+The audio output is done using portaudio, a crossplatform
+audio library.
+
+How to get portaudio:
+
+RPM based Linux distros:
+> yum install portaudio-devel
+
+DEB based Linux distros:
+> apt-get install portaudio19-dev
+
+Compilation:
+------------
+> ./configure
+> make
+> sudo make install
+
+-------------------------------------------------------
+How to use gydra? 
+-------------------------------------------------------
+Getting Help
+------------
+Launch it from the command line with the -h option to get help.
+> ./gydra -h
+
+Usage: gydra [options]
+
+-l, --list-devices      - list of avalable compatible audio devices
+-i, --ip <x.x.x.x>      - IP address of net audio server (default 192.168.4.3)
+-p, --port <n>          - port of net audio server (default 257)
+-d, --device <n>        - audio device id (see --list-devices) for audio output
+                          if not specified the system default audio output
+                          will be used
+-t, --time <n>          - time in seconds for audio output before program exit
+-n, --num-packets <n>   - number of packets to be output before program exit
+-m, --mode [test|real]  - operation mode, real mode is default
+-s, --stop              - stop audio stream from remote engine
+
+-h, --help              - print this help message
+-v, --version           - print program version and copyright and exit
+
+Running
+-------
+Launch gydra from command line with default options.
+> gydra
