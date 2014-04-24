@@ -1,0 +1,90 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH GYDRA SECTION "April 24, 2014"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+gydra \- small utility to play audio from special net audio server.
+.SH SYNOPSIS
+.B gydra
+.RI [ options ]
+.SH DESCRIPTION
+This manual page documents briefly the
+.B gydra
+commands.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBgydra\fP is a program that play UDP audio stream from special hardware audio
+net server designed for special arms. Audio stream can be played via soundcard or can
+be captured to raw audio file. Format options: 30050 Hz sample rate, mono channel,
+24 bit per sample little-endian.
+.SH OPTIONS
+These programs follow the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+A summary of options is included below.
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-v, \-\-version
+Show version of program.
+.TP
+.B \-l, \-\-list-devices
+List of compatible audio devices.
+.TP
+.B \-i, \-\-ip
+IPv4 address of net audio server (default 192.168.4.3). Only dot-decimal form
+of address is allowed.
+.TP
+.B \-p, \-\-port
+Port of net audio server (default 257). Due to default port is under 1024 the 
+program must be run under root privilegies.
+.TP
+.B \-d, \-\-device
+Audio device id for ouput audio stream. If this option is not specified
+output the system default audio output will be used. To list all compatible
+audio devices that can play audio stream of audio net server audio format please
+run program with \fB--list-devices\fP option.
+.TP
+.B \-t, \--time
+Time in seconds for audio output before program exit. After this time elapsed
+the program will be closed automatically.
+.TP
+.B \-n, \-\-num-packets
+Number of packets to be received from net and output to sound card before program exit.
+When specified number of net packets will be received the program will be closed
+automatically.
+.TP
+.B \-m, \-\-mode
+\fI"test"\fP or \fI"real"\fP - operation mode, real mode is default. In test mode net audio server
+generate 1kHz sine wave by itself.
+.TP
+.B \-s, \-\-stop 
+Send "stop" signal to the audio net server. It may be useful in some cases when
+net audio server continue to send packets after program crash.
+.TP
+.B \-\-out-file
+Turn on writing received audio data to the file. This option can by used only
+in conduction with \fB--num--packets\fP or \fB--time\fP options to prevent writing very
+large files. If no filename specified then default \fI"gydra.raw"\fP will be used.
+
+.br
+.SH AUTHOR
+gydra was written by Vityusha V. Vinokurov.
+.PP
+This manual page was written by Vityusha V. Vinokurov <vit@trs.sut.ru>,
+for the Debian project (and may be used by others).
