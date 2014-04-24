@@ -36,7 +36,7 @@ Launch it from the command line with the -h option to get help.
 
 Usage: gydra [options]
 
--l, --list-devices      - list of avalable compatible audio devices
+-l, --list-devices      - list of compatible audio devices
 -i, --ip <x.x.x.x>      - IP address of net audio server (default 192.168.4.3)
 -p, --port <n>          - port of net audio server (default 257)
 -d, --device <n>        - audio device id (see --list-devices) for audio output

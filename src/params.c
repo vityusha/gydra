@@ -25,7 +25,7 @@ const char *real_mode = "real";
 static void print_version()
 {
     fprintf(stderr,
-"\nGydra v.%s - utility to play network audio stream from ...\n"
+"\nGydra v.%s - utility to play network audio stream from special net server.\n"
 "\nGydra is licensed under Modified BSD License.\n"
 "(c) 2014 \"N Project\" author: Vityusha V. Vinokurov\n", VERSION);
 }
@@ -35,7 +35,7 @@ static void print_usage()
     fprintf(stderr, 
 "\nGydra - utility to play network audio stream from ...\n"
 "\nUsage: gydra [options]\n\n"
-"-l, --list-devices\t- list of available compatible audio devices\n"
+"-l, --list-devices\t- list of compatible audio devices\n"
 "-i, --ip <x.x.x.x>\t- IP address of net audio server (default 192.168.4.3)\n"
 "-p, --port <n>\t\t- port of net audio server (default 257)\n"
 "-d, --device <n>\t- audio device id (see --list-devices) for audio output\n"
@@ -65,7 +65,7 @@ void default_params(gydra_param_t* params)
     params->state             = STATE_NORMAL;
     params->ringBufferData    = NULL;
     params->starttime         = time(NULL);
-    /* Program swithes */
+    /* Program switches */
     params->verbose   = 0;
     params->id        = -1;
     params->nsec      = -1;
