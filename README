@@ -26,6 +26,13 @@ Compilation:
 > make
 > sudo make install
 
+Or mayby you must to do:
+> aclocal
+> automake -a
+> ./configure
+> make
+> sudo make install
+
 -------------------------------------------------------
 How to use gydra? 
 -------------------------------------------------------
