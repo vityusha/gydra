@@ -4,7 +4,7 @@
 AC_PREREQ([2.69])
 AC_INIT([gydra], [0.1], [vit@trs.sut.ru])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile man/Makefile])
 AM_INIT_AUTOMAKE
 
 # Checks for programs.

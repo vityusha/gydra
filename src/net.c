@@ -12,14 +12,14 @@
 #ifdef WIN32
 #define DEBUG_FILE_NAME  "d:\\remle.raw"
 #else
-#define DEBUG_FILE_NAME  "/home/vit/remle.raw"
+#define DEBUG_FILE_NAME  "audio/remle.raw"
 #endif
 
 #include "net.h"
 #include "params.h"
 #include "protocol.h"
 
-#define DEBUG_FILE       0
+#define DEBUG_FILE       1
 #ifdef WIN32
 #include <winsock.h>
 #else

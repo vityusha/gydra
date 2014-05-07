@@ -134,7 +134,7 @@ int check_device(int id)
         Pa_Terminate();
         return 0;
     }
-    if( id > numDevices ) {
+    if( id >= numDevices ) {
         printf( "ERROR: Device ID is out of devices range: 0...%d\n", numDevices );
         Pa_Terminate();
         return 0;
