@@ -1,4 +1,6 @@
+
 AUTOMAKE_OPTIONS = foreign subdir-objects
+SUBDIRS = man
 
 CFLAGS=-Wall -O2 -I/usr/local/include -Icommon -DVERSION=\"$(VERSION)\" -DPROG="\"$(PACKAGE)\""
 LDFLAGS=-L/usr/local/lib -lportaudio -lm -lasound
